@@ -21,7 +21,7 @@ struct Answer {
 }
 
 enum ResponseType {
-    case single, multiple, ranged
+    case single, multiple, ranged 
 }
 
 enum DeviceType: Character {
