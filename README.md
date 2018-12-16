@@ -33,7 +33,7 @@
 <kbd><img src="docs/animallikethemost.png" width="300"></kbd>
 
 ### Animal question two
-<kbd><img src="docs/animalactivities.png" width="300"></kbd>
+<kbd><img src="docs/animalsactivities.png" width="300"></kbd>
 
 ### Animal question three
 <kbd><img src="docs/animalenjoycarrides.png" width="300"></kbd>
