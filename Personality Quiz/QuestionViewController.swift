@@ -9,6 +9,10 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    var gamechosen: String?
+    var sort = ""
+    var questionIndex = 0
+    var index = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -37,8 +41,14 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if gamechosen! == "Which Device Are You?" {
+            sort = "Device"
+            questionIndex = 0
+        } else {
+            sort = "A"
+            questionIndex = 1
+        }
         updateUI()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -51,12 +61,11 @@ class QuestionViewController: UIViewController {
         
         let currentQuestion = questions[questionIndex]
         let currentAnswers = currentQuestion.answers
-        let totalProgress = Float(questionIndex) / Float(questions.count)
+        let totalProgress = Float(index) / Float(3)
+        navigationItem.title = "Question #\(index + 1)"
         
-        navigationItem.title = "Question #\(questionIndex+1)"
         questionLabel.text = currentQuestion.text
         questionProgressView.setProgress(totalProgress, animated: true)
-        
         
         switch currentQuestion.type {
         case .single:
@@ -142,7 +151,8 @@ class QuestionViewController: UIViewController {
     }
     
     func nextQuestion() {
-        questionIndex += 1
+        questionIndex += 2
+        index += 1
         
         if questionIndex < questions.count {
         updateUI()

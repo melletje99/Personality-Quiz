@@ -19,19 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zds-FX-5RT">
-                                <rect key="frame" x="32.5" y="297.5" width="310.5" height="72.5"/>
+                                <rect key="frame" x="27.5" y="185.5" width="320" height="296.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Device Are You?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-29-3Bk">
-                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="34.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="310.5" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-s7-jEr">
+                                        <rect key="frame" x="0.0" y="42.5" width="320" height="216"/>
+                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4W-Jc-5Ug">
-                                        <rect key="frame" x="78" y="42.5" width="154" height="30"/>
+                                        <rect key="frame" x="83" y="266.5" width="154" height="30"/>
                                         <state key="normal" title="Begin Personality Quiz"/>
                                         <connections>
-                                            <segue destination="hOU-Pv-S9h" kind="show" id="OUN-aq-PcO"/>
+                                            <segue destination="hOU-Pv-S9h" kind="show" identifier="startQuizSegue" id="OUN-aq-PcO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,6 +79,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gamePicker" destination="cMa-s7-jEr" id="SnM-3m-ejA"/>
+                        <outlet property="ll" destination="4sW-GE-2PU" id="YE8-No-teW"/>
+                        <outlet property="lu" destination="S19-WG-Sbo" id="qYd-JG-Xvo"/>
+                        <outlet property="quizLabel" destination="8PI-29-3Bk" id="16O-5B-9Uw"/>
+                        <outlet property="rl" destination="3OS-tM-8GQ" id="Xfa-Hi-ELP"/>
+                        <outlet property="ru" destination="N50-Sv-uf5" id="KGb-nt-8w0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-qN-fV7">
-                                <rect key="frame" x="16" y="243.5" width="46" height="180"/>
+                                <rect key="frame" x="164.5" y="243.5" width="46" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz9-z6-LNe">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -238,11 +249,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IYZ-jh-q3d" secondAttribute="trailing" id="Avx-oN-tfR"/>
                             <constraint firstAttribute="bottomMargin" secondItem="IYZ-jh-q3d" secondAttribute="bottom" constant="20" id="Ey4-2O-brM"/>
                             <constraint firstItem="iUW-G1-2VQ" firstAttribute="centerY" secondItem="yfL-HR-aVN" secondAttribute="centerY" id="GGG-gL-Q4p"/>
-                            <constraint firstItem="ifq-qN-fV7" firstAttribute="leading" secondItem="yfL-HR-aVN" secondAttribute="leadingMargin" id="KLJ-PL-axM"/>
                             <constraint firstItem="ifq-qN-fV7" firstAttribute="centerY" secondItem="yfL-HR-aVN" secondAttribute="centerY" id="aNy-Gj-qqC"/>
                             <constraint firstItem="pTN-WM-VTW" firstAttribute="leading" secondItem="yfL-HR-aVN" secondAttribute="leadingMargin" id="cL0-Lp-RZD"/>
                             <constraint firstItem="iUW-G1-2VQ" firstAttribute="leading" secondItem="yfL-HR-aVN" secondAttribute="leadingMargin" id="dNp-kf-4Zn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jxH-Fe-5kJ" secondAttribute="trailing" id="dX0-7Y-s2g"/>
+                            <constraint firstItem="ifq-qN-fV7" firstAttribute="centerX" secondItem="yfL-HR-aVN" secondAttribute="centerX" id="esA-k6-1vr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iUW-G1-2VQ" secondAttribute="trailing" id="fiJ-e6-V7M"/>
                             <constraint firstItem="jxH-Fe-5kJ" firstAttribute="leading" secondItem="yfL-HR-aVN" secondAttribute="leadingMargin" id="iSF-fX-2dU"/>
                             <constraint firstItem="pTN-WM-VTW" firstAttribute="centerY" secondItem="yfL-HR-aVN" secondAttribute="centerY" id="kE8-Nk-PJS"/>

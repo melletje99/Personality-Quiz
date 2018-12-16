@@ -22,7 +22,7 @@ class ResultsViewController: UIViewController {
     var responses: [Answer]!
     
     func calculatePersonalityResult() {
-        var frequencyOfAnswers: [DeviceType: Int] = [:]
+        var frequencyOfAnswers: [chosenType: Int] = [:]
         let responseTypes = responses.map { $0.type}
         
         for response in responseTypes {
